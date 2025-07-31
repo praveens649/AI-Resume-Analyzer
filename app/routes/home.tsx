@@ -18,7 +18,7 @@ useEffect(() => {
   if(!auth.isAuthenticated) navigate('/auth?next=/');
 }, [auth.isAuthenticated])
 return (
- <main className="bg-[url('/images/bg-main.jpg')] bg-cover">
+ <main className="bg-black] bg-cover">
     <section className="main-section">
       <Navbar />
       <div className="page-heading py-16">
