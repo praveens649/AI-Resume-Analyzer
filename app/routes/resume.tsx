@@ -1,6 +1,7 @@
 import {Link, useNavigate, useParams} from "react-router";
-import {useEffect, useState} from "react";
-import {usePuterStore} from "~/lib/puter";
+import { useEffect, useState } from "react";
+import { usePuterStore } from "~/lib/puter";
+import { ArrowLeft } from "lucide-react";
 import Summary from "~/components/Summary";
 import ATS from "~/components/Ats";
 import Details from "~/components/Details";
@@ -51,16 +52,16 @@ const Resume = () => {
 
     return (
         <main className="!pt-0">
-            <nav className="resume-nav">
-                <Link to="/" className="back-button">
-                    {/* <img src="/icons/back.svg" alt="logo" className="w-2.5 h-2.5 bg-gray-400" /> */}
-                    <span className="text-white text-sm font-semibold">Back to Homepage</span>
+            <nav className="resume-nav border-b border-gray-600">
+                <Link to="/" className="back-button bg-gray-600 flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
+                    <ArrowLeft className="w-4 h-4" />
+                    <span className="text-sm font-semibold">Back to Homepage</span>
                 </Link>
             </nav>
             <div className="flex flex-row w-full max-lg:flex-col-reverse">
-                <section className="feedback-section bg-[url('/images/bg-small.svg') bg-cover h-[100vh] sticky top-0 items-center justify-center">
+                <section className="feedback-section bg-gray bg-cover h-[100vh] sticky top-0 items-center justify-center">
                     {imageUrl && resumeUrl && (
-                        <div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-wxl:h-fit w-fit">
+                        <div className="animate-in fade-in duration-1000  max-sm:m-0 h-[90%] max-wxl:h-fit w-fit">
                             <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                                 <img
                                     src={imageUrl}
@@ -84,6 +85,7 @@ const Resume = () => {
                     )}
                 </section>
             </div>
+       
         </main>
     )
 }

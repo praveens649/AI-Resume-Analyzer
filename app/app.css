@@ -13,10 +13,12 @@
   --color-badge-green: #14532d;
   --color-badge-red: #7f1d1d;
   --color-badge-yellow: #78350f;
-
   --color-badge-green-text: #d1fae5;
   --color-badge-red-text: #fee2e2;
   --color-badge-yellow-text: #fef3c7;
+  --color-badge-green-bg: rgba(16, 185, 129, 0.1);
+  --color-badge-yellow-bg: rgba(245, 158, 11, 0.1);
+  --color-badge-red-bg: rgba(239, 68, 68, 0.1);
 }
 
 html,
@@ -110,7 +112,7 @@ form {
     @apply flex flex-row justify-between items-center bg-[#1a1a1a] rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto border border-[#333];
   }
 
-  .score-badge {
+    .score-badge {
     @apply flex flex-row items-center justify-center py-1 px-2 gap-4 rounded-[96px] bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white;
   }
 
