@@ -5,6 +5,7 @@ import ResumeCard from "~/components/ResumeCard";
 import {usePuterStore} from "~/lib/puter";
 import {useEffect} from "react";
 import {useNavigate} from "react-router";
+import Summary from "~/components/Summary";
 export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Resumerzz" },
@@ -33,5 +34,6 @@ return (
         </div>
       )}
     </section>
+
 </main>)
 }

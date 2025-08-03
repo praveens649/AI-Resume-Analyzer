@@ -6,6 +6,7 @@ import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
 import { prepareInstructions } from 'constant';
+import Summary from '~/components/Summary';
 // import {prepareInstructions} from "~/constan";
 
 const Upload = () => {
@@ -60,7 +61,7 @@ const Upload = () => {
         data.feedback = JSON.parse(feedbackText);
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText('Analysis complete, redirecting...');
-        console.log(data);
+        navigate(`/resume/${uuid}`)
         // navigate(`/resume/${uuid}`);
     }
 
@@ -120,6 +121,7 @@ const Upload = () => {
                         </form>
                     )}
                 </div>
+          
             </section>
         </main>
     )
